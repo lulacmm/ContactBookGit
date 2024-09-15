@@ -1,7 +1,6 @@
 
 import contactBook.Contact;
 import contactBook.ContactBook;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -179,6 +178,17 @@ public class Main {
         }
         if (!duplicate) {
             System.out.println("All contacts have different phone numbers.");
+        }
+    }
+
+    private static void getContactByNumber(Scanner in, ContactBook cBook) {
+        int phone;
+        phone = in.nextInt();
+        in.nextLine();
+        if (cBook.hasNumber(phone)) {
+            System.out.println(cBook.getName(phone));
+        } else {
+            System.out.println(NUMBER_NOT_EXIST);
         }
     }
 }
