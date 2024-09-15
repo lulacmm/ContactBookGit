@@ -1,4 +1,10 @@
 # ContactBookGit
+
+Students: Name-Number <br>
+Rúben Salvador, 64577 <br>
+Luís Mateus, 65642 <br>
+Pedro Oliveira, 65972 <br>
+
 This is a starter kit for the first lab of the Software Engineering Course.
 Fork this project to make your own version of it.
 
