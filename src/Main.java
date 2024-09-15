@@ -1,6 +1,9 @@
 
 import contactBook.Contact;
 import contactBook.ContactBook;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -155,5 +158,22 @@ public class Main {
         } else {
             System.out.println(BOOK_EMPTY);
         }
+    }
+
+    private static void existingPhone(Scanner in, ContactBook cBook) {
+        Map<Integer, String> phoneMap = new HashMap<>();
+
+        cBook.initializeIterator();
+        while (cBook.hasNext()) {
+            Contact c = cBook.next();
+            int phone = c.getPhone();
+
+            if (phoneMap.containsKey(phone)) {
+                System.out.println("There are contacts that share phone numbers.");
+            } else {
+                phoneMap.put(phone, c.getName());
+            }
+        }
+        System.out.println("All contacts have different phone numbersQ");
     }
 }
