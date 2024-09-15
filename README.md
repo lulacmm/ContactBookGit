@@ -1,6 +1,6 @@
 # ContactBookGit
 
-Students: Name-Number
+Students: Name-Number <br>
 Rúben Salvador, 64577 <br>
 Luís Mateus, 65642 <br>
 Pedro Oliveira, 65972 <br>
