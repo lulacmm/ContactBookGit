@@ -177,7 +177,7 @@ public class Main {
                 phoneMap.put(phone, c.getName());
             }
         }
-        if (duplicate) {
+        if (!duplicate) {
             System.out.println("All contacts have different phone numbers.");
         }
     }
