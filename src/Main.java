@@ -160,8 +160,9 @@ public class Main {
         }
     }
 
-    private static void existingPhone(Scanner in, ContactBook cBook) {
+    private static void existingPhone(ContactBook cBook) {
         Map<Integer, String> phoneMap = new HashMap<>();
+        boolean duplicate = false;
 
         cBook.initializeIterator();
         while (cBook.hasNext()) {
@@ -170,10 +171,14 @@ public class Main {
 
             if (phoneMap.containsKey(phone)) {
                 System.out.println("There are contacts that share phone numbers.");
+                duplicate = true;
+                break;
             } else {
                 phoneMap.put(phone, c.getName());
             }
         }
-        System.out.println("All contacts have different phone numbersQ");
+        if (!duplicate) {
+            System.out.println("All contacts have different phone numbers.");
+        }
     }
 }
