@@ -160,7 +160,7 @@ public class Main {
         }
     }
 
-    private static void existingPhone(Scanner in, ContactBook cBook) {
+    private static void existingPhone(ContactBook cBook) {
         Map<Integer, String> phoneMap = new HashMap<>();
 
         cBook.initializeIterator();
@@ -174,6 +174,6 @@ public class Main {
                 phoneMap.put(phone, c.getName());
             }
         }
-        System.out.println("All contacts have different phone numbersQ");
+        System.out.println("All contacts have different phone numbers.");
     }
 }
