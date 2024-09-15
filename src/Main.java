@@ -172,6 +172,7 @@ public class Main {
         }
     }
 
+    //searches the contact to see if the given phone is already registered on the contact book
     private static void existingPhone(ContactBook cBook) {
         Map<Integer, String> phoneMap = new HashMap<>();
         boolean duplicate = false;
@@ -194,6 +195,7 @@ public class Main {
         }
     }
 
+    //searches the contact book for the contact with the given phone, and returns its name
     private static void getContactByNumber(Scanner in, ContactBook cBook) {
         int phone;
         phone = in.nextInt();

@@ -50,6 +50,7 @@ public class ContactBook {
         return contacts[searchIndexName(name)].getPhone();
     }
 
+    //Pre: name != null && hasContact(name)
     public String getName(int phone) {
         return contacts[searchIndexNumber(phone)].getName();
     }
@@ -69,6 +70,7 @@ public class ContactBook {
         contacts[searchIndexName(name)].setEmail(email);
     }
 
+    //searches the array for the index of the contact with the given name, if the contact does not exist, returns -1
     private int searchIndexName(String name) {
         int i = 0;
         int result = -1;
@@ -86,6 +88,7 @@ public class ContactBook {
         return result;
     }
 
+    //searches the array for the index of the contact with the given phone, if the contact does not exist, returns -1
     private int searchIndexNumber(int phone) {
         int i = 0;
         int result = -1;
